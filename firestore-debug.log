@@ -1,0 +1,13 @@
+API endpoint: http://localhost:4000
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:4000
+
+Dev App Server is now running.
+
+Jul 04, 2020 2:53:47 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jul 04, 2020 2:53:52 AM io.gapi.emulators.netty.NotFoundHandler handleRequest
+INFO: Unknown request URI: /firestore
+*** shutting down gRPC server since JVM is shutting down
+*** server shut down

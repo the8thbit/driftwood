@@ -1,0 +1,39 @@
+<template>
+  <article class='home-view'>
+    <span class='status'>{{data.status}}</span>
+    <SiteDrift />
+  </article>
+</template>
+
+<script>
+import SiteDrift from '@/components/SiteDrift.vue';
+
+export default {
+  name: 'HomeView',
+  components: {
+    SiteDrift
+  },
+  props: {
+    status: {
+      type: String,
+      default: () => 'Drift to a random site...'
+    }
+  },
+  data() {
+    return {
+      data: {
+        status: ''
+      }
+    }
+  },
+  mounted() {
+    this.setStatus(this.status);
+  },
+  methods: {
+    setStatus(status) {
+      this.data.status = status;
+      this.$emit('changeStatus', this.data.status);
+    }
+  }
+}
+</script>

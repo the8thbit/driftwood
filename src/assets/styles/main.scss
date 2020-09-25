@@ -1,0 +1,31 @@
+@use '@/../node_modules/tokenfield/lib/scss/tokenfield.scss';
+@use '@/assets/styles/overrides/__tokenfield.scss';
+
+$nav-inactive-color: #2c3e50;
+$nav-active-color: #00AFFF;
+
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $nav-inactive-color;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: $nav-inactive-color;
+}
+
+#nav a.router-link-exact-active {
+  color: $nav-active-color;
+}
