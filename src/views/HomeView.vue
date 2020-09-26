@@ -28,6 +28,18 @@ export default {
   },
   mounted() {
     this.setStatus(this.status);
+
+    fetch(`http://localhost:3000/`, {
+      credentials: 'include',
+      method: 'GET'
+    }).then((response) => {
+      return response.json();
+    }).then((data) => {
+      console.log(data);
+      this.data.status = data;
+    }).catch((error) => {
+      console.log(error);
+    });
   },
   methods: {
     setStatus(status) {
