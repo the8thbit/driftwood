@@ -29,7 +29,7 @@ export default {
   mounted() {
     this.setStatus(this.status);
 
-    fetch(`http://45.32.210.148:3000/`, {
+    fetch(`${process.env.VUE_APP_API_URL}/`, {
       method: 'GET'
     }).then((response) => {
       return response.json();
