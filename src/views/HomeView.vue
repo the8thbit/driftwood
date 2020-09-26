@@ -29,8 +29,7 @@ export default {
   mounted() {
     this.setStatus(this.status);
 
-    fetch(`http://localhost:3000/`, {
-      credentials: 'include',
+    fetch(`http://45.32.210.148:3000/`, {
       method: 'GET'
     }).then((response) => {
       return response.json();
