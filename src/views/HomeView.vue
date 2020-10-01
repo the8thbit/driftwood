@@ -29,7 +29,7 @@ export default {
   mounted() {
     this.setStatus(this.status);
 
-    fetch(`${process.env.VUE_APP_API_URL}/`, {
+    fetch(`${this.$ENV.string('VUE_APP_API_URL')}/`, {
       method: 'GET'
     }).then((response) => {
       return response.json();
